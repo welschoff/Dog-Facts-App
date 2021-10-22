@@ -1,8 +1,41 @@
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  background-color: var(--color-background-main);
+}
+
+:root {
+  /* COLORS */
+  --color-primary: #ff9800;
+  --color-header-text: #283557;
+  --color-main-text: #d2d4dc;
+  --color-background-header: rgb(180, 186, 180);
+  --color-background-main: #2d2f32;
+  --color-background-card: #3c3e44;
+
+  /* FONT */
+  --font-family-headline: 'Inconsolata', monospace;
+  --font-family-text: 'Ubuntu', sans-serif;
+
+  /* BORDERS */
+  --border-radius: 15px;
+}
+
+.header {
+  background-color: var(--color-background-header);
+  color: var(--color-header-text);
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  padding: 4rem 2rem;
+}
+
+.main {
+  display: grid;
+  background-color: var(--color-background-main);
+  color: var(--color-main-text);
+  padding: 1rem 1rem;
 }

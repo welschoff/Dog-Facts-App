@@ -1,6 +1,34 @@
+import { createElement } from './lib/elements';
 import './style.css';
+import createFactCard from './components/factCard';
+import { fetchFact } from './lib/fetchFact';
 
-document.querySelector('#app').innerHTML = `
-  <h1>Hello Vite!</h1>
-  <a href="https://vitejs.dev/guide/features.html" target="_blank">Documentation</a>
-`;
+async function renderApp() {
+  const appElement = document.querySelector('#app');
+
+  const headerElement = createElement(
+    'header',
+    {
+      className: 'header',
+    },
+    [
+      createElement('h1', {
+        textContent: '🐶 Dog-Facts 🐶',
+      }),
+    ]
+  );
+
+  const dogFacts = await fetchFact();
+  const factCards = createFactCard(dogFacts);
+
+  const mainElement = createElement(
+    'main',
+    {
+      className: 'main',
+    },
+    [factCards]
+  );
+
+  appElement.append(headerElement, mainElement);
+}
+renderApp();

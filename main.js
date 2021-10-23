@@ -2,6 +2,7 @@ import { createElement } from './lib/elements';
 import './style.css';
 import createFactCard from './components/factCard';
 import { fetchFact } from './lib/fetchFact';
+import { createButtonElement } from './components/buttonComponent';
 
 async function renderApp() {
   const appElement = document.querySelector('#app');
@@ -18,17 +19,19 @@ async function renderApp() {
     ]
   );
 
-  const dogFacts = await fetchFact();
-  const factCards = createFactCard(dogFacts);
+  const buttonElement = createButtonElement();
+
+  // const dogFacts = await fetchFact();
+  // const factCards = createFactCard(dogFacts);
 
   const mainElement = createElement(
     'main',
     {
       className: 'main',
-    },
-    [factCards]
+    }
+    // [factCards]
   );
 
-  appElement.append(headerElement, mainElement);
+  appElement.append(headerElement, buttonElement, mainElement);
 }
 renderApp();

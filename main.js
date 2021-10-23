@@ -3,6 +3,7 @@ import './style.css';
 import createFactCard from './components/factCard';
 import { fetchFact } from './lib/fetchFact';
 import { createButtonElement } from './components/buttonComponent';
+import { createFooterElement } from './components/footerComponent';
 
 async function renderApp() {
   const appElement = document.querySelector('#app');
@@ -14,12 +15,13 @@ async function renderApp() {
     },
     [
       createElement('h1', {
-        textContent: '🐶 Dog-Facts 🐶',
+        textContent: '🐶 Dog - Facts 🐶',
       }),
     ]
   );
 
   const buttonElement = createButtonElement();
+  const footerElement = createFooterElement();
 
   // const dogFacts = await fetchFact();
   // const factCards = createFactCard(dogFacts);
@@ -32,6 +34,6 @@ async function renderApp() {
     // [factCards]
   );
 
-  appElement.append(headerElement, buttonElement, mainElement);
+  appElement.append(headerElement, buttonElement, mainElement, footerElement);
 }
 renderApp();

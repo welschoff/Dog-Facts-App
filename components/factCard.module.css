@@ -1,0 +1,10 @@
+.text {
+  display: grid;
+  height: fit-content;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 10px 5px 5px rgb(31, 30, 30);
+  place-items: center;
+  margin: 2rem;
+  background-color: rgb(50, 47, 47);
+}

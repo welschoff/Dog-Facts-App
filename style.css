@@ -30,7 +30,7 @@ body {
 }
 
 .header {
-  padding: 2rem;
+  padding: 3rem;
   text-align: center;
   background-color: black;
   color: rgb(211, 203, 203);
@@ -41,9 +41,9 @@ body {
 
 .main {
   display: grid;
-  background-color: var(--color-background-main);
   color: var(--color-main-text);
   padding: 1rem 1rem;
+
   background-image: url('https://t3.ftcdn.net/jpg/01/96/83/20/400_F_196832044_ISa3G24W2dmiW5X94hJq59Cs8uHat8I1.jpg');
   height: 100vh;
 }

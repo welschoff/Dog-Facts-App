@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
 *,
 *::after,
@@ -9,7 +10,10 @@
 }
 
 body {
-  background-color: var(--color-background-main);
+  background-color: white;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  text-transform: uppercase;
 }
 
 :root {
@@ -30,22 +34,24 @@ body {
 }
 
 .header {
-  padding: 3rem;
+  padding: 2rem;
   text-align: center;
   background-color: black;
   color: rgb(211, 203, 203);
-  font-family: 'roboto';
+  font-family: 'Lato', sans-serif;
   background-size: cover;
   background-position: center;
+  letter-spacing: 0.3rem;
 }
 
 .main {
   display: grid;
-  color: var(--color-main-text);
-  padding: 1rem 1rem;
-
-  background-image: url('https://t3.ftcdn.net/jpg/01/96/83/20/400_F_196832044_ISa3G24W2dmiW5X94hJq59Cs8uHat8I1.jpg');
-  height: 100vh;
+  grid-template-columns: 1fr 1fr;
+  margin: 1rem;
+  height: 80vh;
+  place-items: center;
+  background-color: white;
+  text-align: justify;
 }
 
 .button {
@@ -53,7 +59,7 @@ body {
 }
 
 .button:hover {
-  background-color: rgb(115, 115, 228);
+  background-color: var(--color-primary);
 }
 
 .footer {
@@ -62,4 +68,8 @@ body {
   bottom: 0.5rem;
   right: 0.5rem;
   font-family: 'Dancing Script', cursive;
+}
+
+.image {
+  border-radius: 50%;
 }

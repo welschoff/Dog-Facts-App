@@ -36,7 +36,15 @@ async function renderApp() {
     {
       className: 'main',
     },
-    [factCards]
+
+    [
+      createElement('img', {
+        className: 'image',
+        src: 'https://www.coldnosecollege.com/wp-content/uploads/2018/03/photodune-10916226-dog-reading-a-book-xs-300x300.jpg',
+      }),
+
+      factCards,
+    ]
   );
 
   appElement.append(headerElement, buttonElement, mainElement, footerElement);
